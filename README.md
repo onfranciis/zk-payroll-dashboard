@@ -1,23 +1,94 @@
 # ZK Payroll Dashboard
 
-Privacy-first payroll management dashboard.
+The **ZK Payroll Dashboard** is a privacy-first web application designed for managing decentralized payroll operations on the Stellar network. It leverages Zero-Knowledge Proofs (ZKPs) to ensure salary amounts and payment details remain confidential while maintaining on-chain verifiability.
 
-## Getting Started
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Next.js](https://img.shields.io/badge/built%20with-Next.js-black)
+![Stellar](https://img.shields.io/badge/network-Stellar%20Soroban-purple)
 
-1. Install dependencies:
+## 🚀 Features
+
+- **Connect Wallet**: Seamless integration with Stellar-compatible wallets (Freighter, Albedo).
+- **Privacy-Preserving Payroll**: Execute batch payroll transactions where salary amounts are hidden using ZK commitments.
+- **Employee Management**: Register and manage employees with encrypted metadata.
+- **Transaction History**: verifiable history of all payroll events.
+- **Compliance View**: Optional view-key generation for auditing purposes.
+
+## 🛠 Tech Stack
+
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Language**: TypeScript
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Blockchain Interaction**: `@zk-payroll/sdk`, `stellar-sdk`
+
+## 📦 Prerequisites
+
+- Node.js 18+
+- npm or yarn
+- A Stellar testnet account (funded via Friendbot)
+
+## ⚡️ Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/zkpayroll/zk-payroll-dashboard.git
+   cd zk-payroll-dashboard
+   ```
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. Run the development server:
+3. **Configure Environment**
+   Create a `.env.local` file in the root directory:
+   ```bash
+   NEXT_PUBLIC_RPC_URL=https://soroban-testnet.stellar.org
+   NEXT_PUBLIC_NETWORK_PASSPHRASE="Test SDF Network ; September 2015"
+   NEXT_PUBLIC_CONTRACT_ID=CB...
+   ```
+
+4. **Run Development Server**
    ```bash
    npm run dev
    ```
+   Open [http://localhost:3000](http://localhost:3000) to view the dashboard.
 
-3. Open [http://localhost:3000](http://localhost:3000) with your browser.
+## 🏗 Project Structure
 
-## Features
-- **Wallet Integration**: Connect your crypto wallet.
-- **Payroll Management**: Manage employees and payments.
-- **Transaction History**: View past payouts and deposits.
-- **Privacy**: ZK-proof generation for confidential amounts.
+```
+zk-payroll-dashboard/
+├── app/                  # Next.js App Router pages
+│   ├── globals.css       # Global styles & Tailwind directives
+│   ├── layout.tsx        # Root layout with providers
+│   └── page.tsx          # Dashboard home
+├── components/           # React UI components
+│   ├── layout/           # Structural components (Sidebar, Header)
+│   ├── ui/               # Reusable UI elements (Buttons, Cards)
+│   ├── PayrollSummary.tsx
+│   ├── TransactionHistory.tsx
+│   └── WalletConnect.tsx
+├── lib/                  # Utilities and helper functions
+├── public/               # Static assets
+└── package.json
+```
+
+## 📖 Usage Guide
+
+### 1. connect Wallet
+Click the **"Connect Wallet"** button in the top right header. Select your preferred Stellar wallet.
+
+### 2. Processing Payroll
+Navigate to the **Dashboard** tab. You will see a summary of active employees and total payroll volume. Click "Process Payroll" to initiate a ZK-proof generation for the current pay period.
+
+### 3. Verification
+Once the transaction is confirmed, it will appear in the **Transaction History** table. The "Verified" status indicates that the on-chain ZK verifier successfully validated the payment proof.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please check out the [issues](https://github.com/zkpayroll/zk-payroll-dashboard/issues) page.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
