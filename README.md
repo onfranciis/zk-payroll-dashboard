@@ -42,11 +42,15 @@ The **ZK Payroll Dashboard** is a privacy-first web application designed for man
    ```
 
 3. **Configure Environment**
-   Create a `.env.local` file in the root directory:
+   Copy the example env file and adjust values as needed:
    ```bash
-   NEXT_PUBLIC_RPC_URL=https://soroban-testnet.stellar.org
-   NEXT_PUBLIC_NETWORK_PASSPHRASE="Test SDF Network ; September 2015"
-   NEXT_PUBLIC_CONTRACT_ID=CB...
+   cp .env.example .env.local
+   ```
+   The default variables (already set for Stellar Testnet):
+   ```bash
+   NEXT_PUBLIC_STELLAR_NETWORK=TESTNET
+   NEXT_PUBLIC_HORIZON_URL=https://horizon-testnet.stellar.org
+   NEXT_PUBLIC_SOROBAN_RPC_URL=https://soroban-testnet.stellar.org
    ```
 
 4. **Run Development Server**
