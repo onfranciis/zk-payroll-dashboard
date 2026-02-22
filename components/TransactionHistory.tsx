@@ -1,6 +1,6 @@
 import { ArrowUpRight, ArrowDownLeft } from "lucide-react";
 
-export default function TransactionHistory() {
+function TransactionHistory() {
     const transactions = [
         { id: 1, type: "Payout", recipient: "Alice Smith", amount: "-$2,400", date: "2026-02-15", status: "Completed" },
         { id: 2, type: "Deposit", recipient: "Funding Wallet", amount: "+$50,000", date: "2026-02-14", status: "Completed" },
@@ -50,3 +50,5 @@ export default function TransactionHistory() {
         </div>
     );
 }
+
+export default TransactionHistory;
