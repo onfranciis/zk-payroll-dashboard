@@ -1,0 +1,8 @@
+Thanks for the PR! The shadcn/ui and tailwind setup looks great, and adding the path aliases to `tsconfig.json` was a very helpful addition that fixes Issue #12 as well.
+
+However, there's a minor import path issue in `components/layout/DashboardLayout.tsx`. Because the `Sidebar` and `Header` components are located in `components/layout/`, the absolute imports should be `@/components/layout/Sidebar` and `@/components/layout/Header` (or simply `./Sidebar` and `./Header` since they are in the same directory). 
+
+If you run `npm run build` locally, it currently fails with:
+`Cannot find module '@/components/Sidebar'`
+
+Could you please update those import paths so the build passes? Thanks!

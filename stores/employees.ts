@@ -1,18 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-
-export interface Employee {
-  id: string;
-  address: string;
-  name: string;
-  email?: string;
-  department?: string;
-  salary: number;
-  salaryCommitment: string;
-  isActive: boolean;
-  startDate: string;
-  lastPayment?: string;
-}
+import type { Employee } from '@/types';
 
 interface EmployeeState {
   employees: Employee[];

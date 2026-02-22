@@ -1,14 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-
-interface Company {
-  id: string;
-  name: string;
-  admin: string;
-  treasury: string;
-  employeeCount: number;
-  isActive: boolean;
-}
+import type { Company } from '@/types';
 
 interface CompanyState {
   company: Company | null;
