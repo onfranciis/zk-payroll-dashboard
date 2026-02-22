@@ -1,6 +1,6 @@
 import React from "react";
-import WalletConnect from "../components/WalletConnect";
-import PayrollSummary from "../components/PayrollSummary";
+import WalletConnect from "@/components/features/wallet/WalletConnect";
+import PayrollSummary from "@/components/features/payroll/PayrollSummary";
 
 export default function Home() {
   return (
