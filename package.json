@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
+    "@stellar/freighter-api": "^6.0.1",
+    "@stellar/stellar-sdk": "^14.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.330.0",
@@ -22,7 +24,7 @@
     "zustand": "^5.0.11"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20.19.33",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10",
