@@ -1,6 +1,6 @@
 import { Bell, Search, User } from "lucide-react";
 
-export default function Header() {
+function Header() {
     return (
         <header className="flex items-center justify-between px-6 py-4 bg-white shadow-sm border-b">
             <div className="flex items-center">
@@ -25,3 +25,5 @@ export default function Header() {
         </header>
     );
 }
+
+export default Header;

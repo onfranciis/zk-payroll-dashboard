@@ -1,4 +1,4 @@
-export default function PayrollSummary() {
+function PayrollSummary() {
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -19,3 +19,5 @@ export default function PayrollSummary() {
         </div>
     );
 }
+
+export default PayrollSummary;

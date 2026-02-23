@@ -1,6 +1,6 @@
 import { Home, Users, Settings, History } from "lucide-react";
 
-export default function Sidebar() {
+function Sidebar() {
     return (
         <div className="hidden md:block w-64 bg-white shadow-md">
             <div className="p-6">
@@ -27,3 +27,5 @@ export default function Sidebar() {
         </div>
     );
 }
+
+export default Sidebar;
