@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function WalletConnect() {
+function WalletConnect() {
     const [connected, setConnected] = useState(false);
 
     return (
@@ -15,3 +15,5 @@ export default function WalletConnect() {
         </button>
     );
 }
+
+export default WalletConnect;

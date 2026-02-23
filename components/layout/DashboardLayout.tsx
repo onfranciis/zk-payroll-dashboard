@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
-export default function DashboardLayout({
+function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -18,3 +18,5 @@ export default function DashboardLayout({
     </div>
   );
 }
+
+export default DashboardLayout;
